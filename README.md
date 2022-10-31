@@ -1,4 +1,8 @@
-# emotion_ai
+# Emotions classification
+
+## Business application
+There are a plenty of business applications requires emotions classification.
+Some of them described in this [article](https://rb.ru/longread/emotion-ai/)
 
 ## Project structure:
 
@@ -43,4 +47,10 @@ Just because this task and data from [this kaggle competition](https://www.kaggl
 
 ## Best model
 As you seen above `squeezenet` is the best model
+
+## Required hardware.
+Model tested on NVIDIA GeForce RTX 2070 SUPER
+Time of inference 0.09 s
+
+But squeezenet can inference even on CPU.
 

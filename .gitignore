@@ -7,4 +7,6 @@ dataset/
 source_dataset/
 weights/*.pt
 !weights/squeezenet.pt
-
+.idea/
+*.ipynb
+web_app/

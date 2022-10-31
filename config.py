@@ -22,3 +22,4 @@ FINETUNE_PRETRAINED = True
 
 
 # set the best model
+BEST_MODEL = "squeezenet"
