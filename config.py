@@ -14,12 +14,12 @@ INPUT_WIDTH = 128
 BATCH_SIZE = 8
 
 # set number of epochs
-TRAIN_EPOCHS = 50
+TRAIN_EPOCHS = 20
 
 
 # set finetune pretrained
-FINETUNE_PRETRAINED = True
+FINETUNE_PRETRAINED = False
 
 
 # set the best model
-BEST_MODEL = "squeezenet"
+BEST_MODEL = "densenet"
