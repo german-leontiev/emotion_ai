@@ -35,7 +35,13 @@ feature_extract = config.FINETUNE_PRETRAINED
 
 
 def train_model(
-    model, dataloaders, criterion, optimizer, num_epochs=25, is_inception=False
+    model,
+    dataloaders,
+    criterion,
+    optimizer,
+    num_epochs=25,
+    is_inception=False,
+    model_name="resnet",
 ):
     """
     This functions trains selected model
@@ -46,7 +52,7 @@ def train_model(
 
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
-
+    best_epoch_acc = 0
     for epoch in range(num_epochs):
         print("Epoch {}/{}".format(epoch, num_epochs - 1))
         print("-" * 10)
@@ -101,7 +107,12 @@ def train_model(
             epoch_acc = running_corrects.double() / len(dataloaders[phase].dataset)
 
             print("{} Loss: {:.4f} Acc: {:.4f}".format(phase, epoch_loss, epoch_acc))
-
+            if phase == "val" and epoch_acc > best_epoch_acc:
+                # Save entire model
+                save_path = f"weights/{model_name}.pt"
+                print(f"Val acc improved. Saving result in {save_path}")
+                torch.save(model_ft, save_path)
+                best_epoch_acc = epoch_acc
             # deep copy the model
             if phase == "val" and epoch_acc > best_acc:
                 best_acc = epoch_acc
@@ -297,10 +308,5 @@ if __name__ == "__main__":
             optimizer_ft,
             num_epochs=num_epochs,
             is_inception=(model_name == "inception"),
+            model_name=model_name,
         )
-
-        # Save entire model
-        save_path = f"weights/{model_name}.pt"
-        print(f"Saving result in {save_path}")
-        torch.save(model_ft, save_path)
-        print("\n\n")
