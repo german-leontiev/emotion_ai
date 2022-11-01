@@ -56,7 +56,7 @@ Time of inference 0.09 s
 ## Inference
 Script takes one argument - path to file.
 
-`$ python inference.py test.jpg`
+`$ python inference.py test_image.jpg`
 Emotion: happy
 
 
