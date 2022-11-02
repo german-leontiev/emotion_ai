@@ -51,7 +51,7 @@ As you seen above `densenet` is the best model (inception has bigger infernce ti
 
 ## Required hardware.
 Model tested on NVIDIA GeForce RTX 2070 SUPER
-Time of inference 0.09 s
+Time of inference 0.21 s
 
 ## Inference
 Script takes one argument - path to file.

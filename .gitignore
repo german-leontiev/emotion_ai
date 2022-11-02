@@ -12,3 +12,4 @@ weights/*.pt
 web_app/
 evaluation_results_bak.txt
 weights_bak/
+submission.csv
