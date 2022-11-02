@@ -2,7 +2,8 @@
 
 ## Business application
 There are a plenty of business applications requires emotions classification.
-Some of them described in this [article](https://rb.ru/longread/emotion-ai/)
+Some of them described in this [article](https://rb.ru/longread/emotion-ai/).
+
 I suggest using this solution in companies with Face ID at checkpoints to constantly be aware of the emotions of employees.
 If a particular employee has a negative dynamic, you should understand the reasons and help him.
 
@@ -64,5 +65,5 @@ Emotion: happy
 ## Scaling potential
 I suggest to check emotions of employees retrospectively at the night time after the working day.
 Using NVIDIA GeForce RTX 2070 SUPER it takes 8 hours to process 136k images.
-That means you can monitor emotions of 68k employees dayly.
+That means you can monitor emotions of 68k employees daily.
 If you need more - you have to increase computing power.
